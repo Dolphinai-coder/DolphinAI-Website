@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Navbar from './Navbar.jsx';
 import useSEO from './useSEO.js';
 import posts from './blog-posts.json';
+import FeaturedVisual from './FeaturedVisual.jsx';
 
 const CATEGORY_COLORS = {
   'Spend Intelligence': { bg: '#FEF0E6', color: '#C05818' },
@@ -85,16 +86,7 @@ export default function BlogPage() {
               </div>
 
               {/* visual panel */}
-              <div style={{
-                background: 'linear-gradient(135deg, #111 0%, #1E1E1E 50%, #C05818 85%, #E06820 100%)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 48,
-              }}>
-                <div style={{ textAlign: 'center' }}>
-                  <div style={{ fontSize: 56, lineHeight: 1, marginBottom: 12 }}>📊</div>
-                  <p style={{ fontFamily: 'Inter, sans-serif', fontSize: 11, fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', marginBottom: 8 }}>Read Article</p>
-                  <div style={{ width: 32, height: 2, background: 'var(--copper)', margin: '0 auto' }} />
-                </div>
-              </div>
+              <FeaturedVisual />
             </article>
           </Link>
         )}

@@ -1,23 +1,363 @@
 [
   {
+    "slug": "improve-spend-visibility-supply-chain",
+    "title": "How to Improve Spend Visibility Across Your Supply Chain",
+    "category": "Spend Analytics",
+    "date": "2026-10-14",
+    "author": "Dolphin AI Team",
+    "readTime": "7 min read",
+    "featured": true,
+    "excerpt": "Learn how to improve spend visibility across your supply chain by consolidating data, standardizing records, classifying spend, normalizing suppliers, and turning insights into actionable decisions.",
+    "hero": "",
+    "content": [
+      {
+        "type": "image",
+        "src": "/blog/improve-spend-visibility-supply-chain/1-spend-data-to-classified-view.webp",
+        "alt": "ERP exports, spreadsheets and supplier record files flowing into a spend visibility dashboard showing total spend, supplier count, spend by category and a monthly trend",
+        "caption": "Spend visibility begins by bringing scattered source files into one classified view. Illustrative figures.",
+        "width": 1200,
+        "height": 675
+      },
+      {
+        "type": "paragraph",
+        "text": "Many organizations have more purchasing data than ever, but that does not automatically mean they understand their spend. Information may sit across ERP exports, finance systems, spreadsheets, business units, and supplier files. Different descriptions, inconsistent category labels, and duplicate supplier records can make it difficult to see what the organization is buying, from whom, and where opportunities may exist."
+      },
+      {
+        "type": "paragraph",
+        "text": "Improving spend visibility is about turning these disconnected records into a consistent view of spend that teams can use. The process starts with reliable data and continues through classification, supplier normalization, reporting, and action."
+      },
+      {
+        "type": "heading",
+        "text": "What Is Spend Visibility?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Spend visibility is the ability to understand how an organization spends money across categories, suppliers, business units, and time periods. A useful view helps teams answer practical questions: What are we buying? Which suppliers receive the most spend? Are several teams buying similar items from different vendors? Which records need review? How has spending changed over time?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Good spend visibility is more than a total-spend report. It depends on data that is complete enough, consistently categorized, and detailed enough to support decisions. When the underlying records are unreliable, even a polished dashboard can tell an incomplete story."
+      },
+      {
+        "type": "heading",
+        "text": "Why Is Spend Visibility Difficult to Achieve?"
+      },
+      {
+        "type": "subheading",
+        "text": "1. Spend Data Is Spread Across Systems"
+      },
+      {
+        "type": "paragraph",
+        "text": "Different teams may use different ERP systems, accounting tools, purchasing platforms, or spreadsheets. Combining exports manually takes time and can create version-control problems. Until the data is brought together, teams may be working from different views of the same organization."
+      },
+      {
+        "type": "subheading",
+        "text": "2. Descriptions and Categories Are Inconsistent"
+      },
+      {
+        "type": "paragraph",
+        "text": "The same type of item can appear under several descriptions, abbreviations, or local naming conventions. If similar purchases are grouped differently, category totals become harder to compare and patterns may remain hidden."
+      },
+      {
+        "type": "subheading",
+        "text": "3. Supplier Records May Be Duplicated"
+      },
+      {
+        "type": "paragraph",
+        "text": "A supplier can appear under a legal name, a trading name, a shortened label, or a slightly different spelling. Without normalization, these records can look like separate vendors and make it harder to understand total spend with one supplier."
+      },
+      {
+        "type": "subheading",
+        "text": "4. Reports Show Totals but Not What to Do Next"
+      },
+      {
+        "type": "paragraph",
+        "text": "A monthly total can tell teams how much was spent, but not necessarily what drove the change or where to investigate. Useful visibility connects the numbers to categories, suppliers, trends, and questions that teams can act on."
+      },
+      {
+        "type": "image",
+        "src": "/blog/improve-spend-visibility-supply-chain/2-before-after-standardized-spend-data.webp",
+        "alt": "Before and after comparison: three separate files holding inconsistent supplier names and mismatched category labels on the left, consolidated into one standardized supplier record with totals and trends on the right",
+        "caption": "The same supplier before and after standardization. Fragmented name variants hide the true total.",
+        "width": 1200,
+        "height": 675
+      },
+      {
+        "type": "heading",
+        "text": "How to Improve Spend Visibility Across Your Supply Chain"
+      },
+      {
+        "type": "image",
+        "src": "/blog/improve-spend-visibility-supply-chain/5-six-step-spend-visibility-framework.webp",
+        "alt": "Six-step spend visibility framework shown as numbered stages: consolidate data, clean and standardize, classify spend, normalize suppliers, build dashboards, investigate and act",
+        "caption": "The six steps covered below. Each one depends on the quality of the step before it.",
+        "width": 1200,
+        "height": 454
+      },
+      {
+        "type": "subheading",
+        "text": "1. Consolidate the Data You Already Have"
+      },
+      {
+        "type": "paragraph",
+        "text": "Start by identifying the sources that contain relevant spend information. These may include ERP exports, finance systems, purchasing records, and spreadsheets maintained by individual teams. Bring the data into a consistent working structure and document the source and date of each file."
+      },
+      {
+        "type": "paragraph",
+        "text": "You do not need to replace every system before you begin. A practical first step is to establish a repeatable process for combining the available data and understanding what is missing."
+      },
+      {
+        "type": "subheading",
+        "text": "2. Clean and Standardize the Records"
+      },
+      {
+        "type": "paragraph",
+        "text": "Review key fields such as supplier name, item description, date, currency, amount, business unit, and category. Resolve obvious formatting inconsistencies, flag missing values, and preserve the original records so that changes can be traced. Standardization makes comparisons more dependable."
+      },
+      {
+        "type": "subheading",
+        "text": "3. Classify Spend Into Meaningful Categories"
+      },
+      {
+        "type": "paragraph",
+        "text": "Classification groups individual transactions into categories that people can understand and analyze. A structured taxonomy can help teams move from broad groups to more detailed subcategories. For example, a high-level office supplies category may need to be separated from IT equipment or facilities-related purchases to make the resulting analysis useful."
+      },
+      {
+        "type": "paragraph",
+        "text": "Define how categories should be assigned, identify records that need review, and check that similar transactions are treated consistently. Automation can speed up classification, but teams should still be able to inspect uncertain or unusual records."
+      },
+      {
+        "type": "subheading",
+        "text": "4. Normalize Supplier Names"
+      },
+      {
+        "type": "paragraph",
+        "text": "Match variations of the same supplier to a consistent supplier record where the evidence supports it. This helps teams see a more complete view of spend with each vendor and investigate whether separate departments are buying similar products or services from different sources."
+      },
+      {
+        "type": "paragraph",
+        "text": "Avoid merging suppliers solely because their names look alike. Use appropriate identifiers and review exceptions before combining records."
+      },
+      {
+        "type": "image",
+        "src": "/blog/improve-spend-visibility-supply-chain/3-supplier-normalization-example.webp",
+        "alt": "Three source records named ABC Industrial Ltd., ABC Ind. and A.B.C. Industrial passing through a review and verify step, then resolving to a single verified supplier record with supplier ID, category and location",
+        "caption": "Illustrative example. Name similarity alone is not proof that records belong to the same supplier — matches should be confirmed against identifiers such as tax ID, registered address or bank details, and reviewed before records are merged.",
+        "width": 1200,
+        "height": 675
+      },
+      {
+        "type": "subheading",
+        "text": "5. Build Dashboards Around Business Questions"
+      },
+      {
+        "type": "paragraph",
+        "text": "A spend visibility dashboard should help users investigate, not just admire charts. Start with a small set of views that answer recurring questions, such as spend by category, spend by supplier, spend by business unit, and changes over time. Where possible, let users move from a high-level total to the transactions behind it."
+      },
+      {
+        "type": "paragraph",
+        "text": "Make definitions clear. State the reporting period, currency, data coverage, and any exclusions. If part of the data is unclassified or missing, make that visible instead of presenting the results as complete."
+      },
+      {
+        "type": "image",
+        "src": "/blog/improve-spend-visibility-supply-chain/4-spend-visibility-dashboard.webp",
+        "alt": "Spend visibility dashboard showing total spend, supplier and category counts, spend by category, top suppliers by spend, a monthly spend trend and a spend visibility score",
+        "caption": "An illustrative dashboard built around recurring questions. All figures, suppliers and categories are fictional sample data.",
+        "width": 1200,
+        "height": 675
+      },
+      {
+        "type": "subheading",
+        "text": "6. Turn the Findings Into Specific Actions"
+      },
+      {
+        "type": "paragraph",
+        "text": "Use the analysis to identify questions worth investigating. A category with rising spend may reflect higher prices, increased demand, a change in business activity, or a data-quality issue."
+      },
+      {
+        "type": "paragraph",
+        "text": "A supplier with a growing share of spend may warrant a closer look at contract coverage, purchasing patterns, or continuity risk. The data points to areas for review, but it does not replace business context."
+      },
+      {
+        "type": "paragraph",
+        "text": "Assign an owner to each follow-up, record the question being investigated, and review the outcome. This creates a feedback loop in which reporting supports decisions and the results inform the next analysis."
+      },
+      {
+        "type": "heading",
+        "text": "Which Metrics Should You Monitor?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Choose metrics that help the team assess both data quality and business patterns. The right set depends on the organization's data and goals, but useful starting points include:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Classification coverage:** The share of spend assigned to a usable category.",
+          "**Supplier normalization coverage:** The share of supplier spend linked to reviewed, consistent supplier records.",
+          "**Unclassified or incomplete spend:** The value and share of records that still need attention.",
+          "**Spend by category and supplier:** The largest areas of spend and how they change over time.",
+          "**Period-over-period changes:** Notable increases or decreases that deserve investigation.",
+          "**Data freshness:** How recently the underlying spend records were updated."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Define each metric consistently and show its reporting period. A trend is only meaningful when users understand whether the data coverage and calculation method have changed."
+      },
+      {
+        "type": "heading",
+        "text": "How AI Can Support Spend Visibility"
+      },
+      {
+        "type": "paragraph",
+        "text": "AI can help teams process large volumes of transaction descriptions, suggest spend categories, identify likely supplier-name variations, and highlight records that may need attention. This can reduce repetitive manual work and help analysts focus on exceptions and decisions."
+      },
+      {
+        "type": "paragraph",
+        "text": "AI is most useful when the process remains transparent and reviewable. Teams should be able to validate classifications, inspect uncertain matches, and understand the scope and limitations of the data. Automation improves the workflow, but reliable results still depend on appropriate data, clear rules, and human oversight."
+      },
+      {
+        "type": "heading",
+        "text": "How Dolphin AI Fits Into the Process"
+      },
+      {
+        "type": "paragraph",
+        "text": "Dolphin AI helps organizations turn spend data from spreadsheets and business systems into more structured spend intelligence. Its capabilities include AI-powered spend classification, supplier normalization, data-quality checks, and reporting designed to help teams investigate spending patterns across categories and suppliers."
+      },
+      {
+        "type": "paragraph",
+        "text": "For teams that need a clearer view of spend without starting with a large systems transformation, Dolphin AI can be one option to evaluate. Review the product details and determine whether the workflow fits your data sources, reporting needs, and review process."
+      },
+      {
+        "type": "paragraph",
+        "text": "Learn more about Dolphin AI: https://dolphinaipro.com/"
+      },
+      {
+        "type": "paragraph",
+        "text": "**[INTERNAL LINK: Link the words “spend analytics” to the first blog once its website URL is confirmed.]**"
+      },
+      {
+        "type": "heading",
+        "text": "What to Look for in a Spend Visibility Solution"
+      },
+      {
+        "type": "paragraph",
+        "text": "When evaluating a spend visibility solution, consider the following:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Data intake:** Can it work with the files and systems your organization already uses?",
+          "**Classification:** Can it organize transactions into categories at a useful level of detail?",
+          "**Supplier normalization:** Can it help identify duplicate or inconsistent supplier records while allowing review?",
+          "**Data quality:** Can users see missing, incomplete, or uncertain records?",
+          "**Reporting:** Can teams explore spend by category, supplier, business unit, and time period?",
+          "**Transparency:** Can users validate results and trace findings back to source records?",
+          "**Practical fit:** Does the solution match your team's implementation capacity and budget?"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "subheading",
+        "text": "What Does Spend Visibility Mean?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Spend visibility is the ability to understand where an organization's money is going, including spend by category, supplier, business unit, and time period, using consistent and sufficiently complete data."
+      },
+      {
+        "type": "subheading",
+        "text": "How Can a Company Improve Spend Visibility?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Start by consolidating available data, cleaning and standardizing records, classifying transactions, normalizing supplier names, building useful dashboards, and assigning owners to investigate findings."
+      },
+      {
+        "type": "subheading",
+        "text": "Why Is Supplier Normalization Important?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Supplier normalization helps bring supported variations of the same vendor record together, making it easier to understand total spend and purchasing patterns. Potential matches should be reviewed before records are merged."
+      },
+      {
+        "type": "subheading",
+        "text": "Can AI Improve Spend Analysis?"
+      },
+      {
+        "type": "paragraph",
+        "text": "AI can assist with classification, supplier matching, and identifying records for review. Results should be validated, especially where the source data is incomplete or the model is uncertain."
+      },
+      {
+        "type": "heading",
+        "text": "Make Spend Data Easier to Act On"
+      },
+      {
+        "type": "paragraph",
+        "text": "Better spend visibility comes from a repeatable process, not a dashboard alone. When teams consolidate their data, improve consistency, classify transactions, normalize supplier records, and investigate the resulting patterns, they can make more informed supply chain decisions."
+      },
+      {
+        "type": "paragraph",
+        "text": "If your team is working to make disconnected spend data more useful, explore Dolphin AI and assess whether its spend classification and analytics capabilities fit your needs."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Book a demo:** https://www.dolphinaipro.com/book-demo"
+      }
+    ]
+  },
+  {
     "slug": "hidden-cost-of-unclassified-spend",
     "title": "The Hidden Cost of Unclassified Spend Data",
     "category": "Spend Intelligence",
     "date": "2026-09-15",
     "author": "Dolphin AI Team",
     "readTime": "5 min read",
-    "featured": true,
+    "featured": false,
     "excerpt": "Most finance teams don't know what they don't know. When 30–50% of spend is unclassified, the real cost isn't just wasted budget — it's the decisions you can't make.",
+    "hero": "",
     "content": [
-      { "type": "paragraph", "text": "Every organization has a spend classification problem. The question isn't whether your data is messy — it's how much that mess is costing you in decisions you can't make, suppliers you can't benchmark, and savings you can't capture." },
-      { "type": "heading", "text": "What Does Unclassified Spend Actually Mean?" },
-      { "type": "paragraph", "text": "Unclassified spend is any transaction that can't be mapped to a meaningful category in your taxonomy. It shows up in ERP exports as blank category fields, generic GL codes like '6000 - General Expenses', or catch-all buckets that tell you nothing about what was actually bought." },
-      { "type": "callout", "text": "Industry benchmarks consistently show that 30–50% of enterprise spend data is either unclassified or misclassified when first extracted from source systems." },
-      { "type": "heading", "text": "The Real Cost: Decisions You Cannot Make" },
-      { "type": "paragraph", "text": "The direct cost of unclassified spend is almost impossible to calculate — because it lives in opportunities missed, not in budget lines. You cannot benchmark supplier pricing if you don't know which category they belong to. You cannot identify consolidation opportunities if the same product appears under five different descriptions across three systems. You cannot report to leadership on category spend if the categories don't exist." },
-      { "type": "heading", "text": "How AI Changes the Equation" },
-      { "type": "paragraph", "text": "Modern spend classification AI reads raw transaction descriptions — the messy, abbreviated, inconsistent text that comes out of ERP systems — and maps each line to a structured taxonomy with confidence scoring. High-confidence classifications are applied automatically. Low-confidence ones go to a review queue. Nothing is silently accepted." },
-      { "type": "paragraph", "text": "The result is a spend dataset where every transaction has a category, every supplier has a normalized name, and every analyst has data they can actually use." }
+      {
+        "type": "paragraph",
+        "text": "Every organization has a spend classification problem. The question isn't whether your data is messy — it's how much that mess is costing you in decisions you can't make, suppliers you can't benchmark, and savings you can't capture."
+      },
+      {
+        "type": "heading",
+        "text": "What Does Unclassified Spend Actually Mean?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Unclassified spend is any transaction that can't be mapped to a meaningful category in your taxonomy. It shows up in ERP exports as blank category fields, generic GL codes like '6000 - General Expenses', or catch-all buckets that tell you nothing about what was actually bought."
+      },
+      {
+        "type": "callout",
+        "text": "Industry benchmarks consistently show that 30–50% of enterprise spend data is either unclassified or misclassified when first extracted from source systems."
+      },
+      {
+        "type": "heading",
+        "text": "The Real Cost: Decisions You Cannot Make"
+      },
+      {
+        "type": "paragraph",
+        "text": "The direct cost of unclassified spend is almost impossible to calculate — because it lives in opportunities missed, not in budget lines. You cannot benchmark supplier pricing if you don't know which category they belong to. You cannot identify consolidation opportunities if the same product appears under five different descriptions across three systems. You cannot report to leadership on category spend if the categories don't exist."
+      },
+      {
+        "type": "heading",
+        "text": "How AI Changes the Equation"
+      },
+      {
+        "type": "paragraph",
+        "text": "Modern spend classification AI reads raw transaction descriptions — the messy, abbreviated, inconsistent text that comes out of ERP systems — and maps each line to a structured taxonomy with confidence scoring. High-confidence classifications are applied automatically. Low-confidence ones go to a review queue. Nothing is silently accepted."
+      },
+      {
+        "type": "paragraph",
+        "text": "The result is a spend dataset where every transaction has a category, every supplier has a normalized name, and every analyst has data they can actually use."
+      }
     ]
   },
   {
@@ -29,15 +369,40 @@
     "readTime": "6 min read",
     "featured": false,
     "excerpt": "Supply Chain analytics used to mean pivot tables and quarterly reviews. AI has changed what's possible — and the gap between early adopters and everyone else is widening fast.",
+    "hero": "",
     "content": [
-      { "type": "paragraph", "text": "Three years ago, the state of the art in supply chain analytics was a well-maintained Power BI dashboard connected to a data warehouse that someone in IT agreed to update monthly. That was considered good. Today, that's the floor — and organizations still there are operating with a significant competitive disadvantage." },
-      { "type": "heading", "text": "From Descriptive to Predictive" },
-      { "type": "paragraph", "text": "Traditional supply chain analytics answered one question: what happened? AI-powered analytics answer three: what happened, why did it happen, and what should we do next? The shift from descriptive to predictive and prescriptive insight is the defining change of this generation of supply chain technology." },
-      { "type": "callout", "text": "Organizations using AI-assisted spend classification report 60–80% reduction in time spent on data preparation, freeing analysts to focus on strategic decisions rather than data cleaning." },
-      { "type": "heading", "text": "Supplier Normalization: The Foundation" },
-      { "type": "paragraph", "text": "Before any analytics can be trusted, supplier data must be clean. 'Microsoft', 'Microsoft Corp', 'MSFT', and 'Microsoft Corporation Ltd' are the same supplier — but in a raw ERP export, they look like four different vendors. AI entity resolution maps them to a single canonical record, giving you an accurate view of total relationship spend." },
-      { "type": "heading", "text": "The Data That Was Always There" },
-      { "type": "paragraph", "text": "The most important insight for supply chain leaders is that the data you need has almost certainly always existed in your systems. ERP transactions, purchase orders, invoice lines — the raw material for world-class supply chain analytics is already there. The gap has always been in the cleaning, classification, and connection of that data. That gap is now closeable in weeks, not years." }
+      {
+        "type": "paragraph",
+        "text": "Three years ago, the state of the art in supply chain analytics was a well-maintained Power BI dashboard connected to a data warehouse that someone in IT agreed to update monthly. That was considered good. Today, that's the floor — and organizations still there are operating with a significant competitive disadvantage."
+      },
+      {
+        "type": "heading",
+        "text": "From Descriptive to Predictive"
+      },
+      {
+        "type": "paragraph",
+        "text": "Traditional supply chain analytics answered one question: what happened? AI-powered analytics answer three: what happened, why did it happen, and what should we do next? The shift from descriptive to predictive and prescriptive insight is the defining change of this generation of supply chain technology."
+      },
+      {
+        "type": "callout",
+        "text": "Organizations using AI-assisted spend classification report 60–80% reduction in time spent on data preparation, freeing analysts to focus on strategic decisions rather than data cleaning."
+      },
+      {
+        "type": "heading",
+        "text": "Supplier Normalization: The Foundation"
+      },
+      {
+        "type": "paragraph",
+        "text": "Before any analytics can be trusted, supplier data must be clean. 'Microsoft', 'Microsoft Corp', 'MSFT', and 'Microsoft Corporation Ltd' are the same supplier — but in a raw ERP export, they look like four different vendors. AI entity resolution maps them to a single canonical record, giving you an accurate view of total relationship spend."
+      },
+      {
+        "type": "heading",
+        "text": "The Data That Was Always There"
+      },
+      {
+        "type": "paragraph",
+        "text": "The most important insight for supply chain leaders is that the data you need has almost certainly always existed in your systems. ERP transactions, purchase orders, invoice lines — the raw material for world-class supply chain analytics is already there. The gap has always been in the cleaning, classification, and connection of that data. That gap is now closeable in weeks, not years."
+      }
     ]
   },
   {
@@ -49,15 +414,40 @@
     "readTime": "7 min read",
     "featured": false,
     "excerpt": "Most spend analysis still starts in Excel. That's not a problem — until it is. Here's how to know when you've outgrown spreadsheets, and what the migration actually looks like.",
+    "hero": "",
     "content": [
-      { "type": "paragraph", "text": "There is nothing wrong with Excel. For a team managing spend analysis for a business with a handful of suppliers and clean GL data, a well-structured spreadsheet is a perfectly reasonable tool. The problem isn't Excel — it's using Excel for problems Excel wasn't built to solve." },
-      { "type": "heading", "text": "The Signs You've Outgrown Spreadsheets" },
-      { "type": "paragraph", "text": "You know you've outgrown Excel for spend analysis when: your classification file has more VLOOKUP chains than rows of actual data; two analysts produce different numbers from the same source file; your monthly close process includes three hours of 'fixing the spend report'; or leadership has stopped trusting the numbers because they've been wrong before." },
-      { "type": "callout", "text": "The average enterprise supply chain team spends 12–15 hours per month manually cleaning and classifying spend data in spreadsheets. That's time that could be spent on supplier negotiations and savings initiatives." },
-      { "type": "heading", "text": "What Migration Actually Looks Like" },
-      { "type": "paragraph", "text": "The fear most supply chain teams have about moving off Excel is that it requires a 12-month IT project and a complete data strategy overhaul. In practice, modern spend intelligence platforms are designed to accept Excel and CSV exports as a primary input. You export what you have, the platform ingests it, cleans it, classifies it, and returns structured data." },
-      { "type": "heading", "text": "Keeping Excel in the Workflow" },
-      { "type": "paragraph", "text": "For most teams, the goal isn't to eliminate Excel — it's to eliminate Excel as the system of record for raw, unclean data. Once spend is classified and cleaned, exporting to Excel for ad-hoc analysis, board presentations, or finance integration remains a completely valid workflow. The difference is that you're exporting from a trusted source, not working around an untrustworthy one." }
+      {
+        "type": "paragraph",
+        "text": "There is nothing wrong with Excel. For a team managing spend analysis for a business with a handful of suppliers and clean GL data, a well-structured spreadsheet is a perfectly reasonable tool. The problem isn't Excel — it's using Excel for problems Excel wasn't built to solve."
+      },
+      {
+        "type": "heading",
+        "text": "The Signs You've Outgrown Spreadsheets"
+      },
+      {
+        "type": "paragraph",
+        "text": "You know you've outgrown Excel for spend analysis when: your classification file has more VLOOKUP chains than rows of actual data; two analysts produce different numbers from the same source file; your monthly close process includes three hours of 'fixing the spend report'; or leadership has stopped trusting the numbers because they've been wrong before."
+      },
+      {
+        "type": "callout",
+        "text": "The average enterprise supply chain team spends 12–15 hours per month manually cleaning and classifying spend data in spreadsheets. That's time that could be spent on supplier negotiations and savings initiatives."
+      },
+      {
+        "type": "heading",
+        "text": "What Migration Actually Looks Like"
+      },
+      {
+        "type": "paragraph",
+        "text": "The fear most supply chain teams have about moving off Excel is that it requires a 12-month IT project and a complete data strategy overhaul. In practice, modern spend intelligence platforms are designed to accept Excel and CSV exports as a primary input. You export what you have, the platform ingests it, cleans it, classifies it, and returns structured data."
+      },
+      {
+        "type": "heading",
+        "text": "Keeping Excel in the Workflow"
+      },
+      {
+        "type": "paragraph",
+        "text": "For most teams, the goal isn't to eliminate Excel — it's to eliminate Excel as the system of record for raw, unclean data. Once spend is classified and cleaned, exporting to Excel for ad-hoc analysis, board presentations, or finance integration remains a completely valid workflow. The difference is that you're exporting from a trusted source, not working around an untrustworthy one."
+      }
     ]
   },
   {
@@ -69,18 +459,52 @@
     "readTime": "4 min read",
     "featured": false,
     "excerpt": "Spend classification problems rarely announce themselves. They hide in slow reports, conflicting numbers, and the quiet frustration of analysts who've stopped trusting the data.",
+    "hero": "",
     "content": [
-      { "type": "paragraph", "text": "Spend classification debt accumulates slowly and announces itself suddenly — usually when a CFO asks a question no one can answer, or when a supplier audit reveals that three different business units have been buying the same product from five different vendors at five different prices." },
-      { "type": "heading", "text": "Sign 1: Your Spend Reports Take Days to Produce" },
-      { "type": "paragraph", "text": "If generating a spend report requires significant manual effort — exporting from multiple systems, reconciling categories, de-duplicating supplier names — that's a classification problem presenting as a reporting problem. Classified spend data should produce reports in minutes, not days." },
-      { "type": "heading", "text": "Sign 2: Different Teams Have Different Numbers" },
-      { "type": "paragraph", "text": "When finance, supply chain, and operations all have different answers to 'how much did we spend with Supplier X last quarter', the root cause is almost always inconsistent classification and supplier normalization. The data is there — it just isn't coherent." },
-      { "type": "heading", "text": "Sign 3: Your Top 10 Suppliers List Looks Wrong" },
-      { "type": "paragraph", "text": "If you look at your top suppliers by spend and something feels off — a supplier you know is significant isn't on the list, or an unfamiliar name is near the top — it's often because spend is fragmented across multiple supplier name variations." },
-      { "type": "heading", "text": "Sign 4: You Can't Answer Basic Category Questions" },
-      { "type": "paragraph", "text": "How much did we spend on IT last year? What's our total facilities cost? If questions like these require a significant research project rather than a dashboard lookup, your spend isn't classified at a useful level of granularity." },
-      { "type": "heading", "text": "Sign 5: Leadership Has Stopped Asking for Spend Data" },
-      { "type": "paragraph", "text": "The quietest sign of a spend data problem is when leadership stops asking for spend reports — not because they don't want the information, but because they've learned the numbers can't be trusted. Rebuilding that trust starts with classification." }
+      {
+        "type": "paragraph",
+        "text": "Spend classification debt accumulates slowly and announces itself suddenly — usually when a CFO asks a question no one can answer, or when a supplier audit reveals that three different business units have been buying the same product from five different vendors at five different prices."
+      },
+      {
+        "type": "heading",
+        "text": "Sign 1: Your Spend Reports Take Days to Produce"
+      },
+      {
+        "type": "paragraph",
+        "text": "If generating a spend report requires significant manual effort — exporting from multiple systems, reconciling categories, de-duplicating supplier names — that's a classification problem presenting as a reporting problem. Classified spend data should produce reports in minutes, not days."
+      },
+      {
+        "type": "heading",
+        "text": "Sign 2: Different Teams Have Different Numbers"
+      },
+      {
+        "type": "paragraph",
+        "text": "When finance, supply chain, and operations all have different answers to 'how much did we spend with Supplier X last quarter', the root cause is almost always inconsistent classification and supplier normalization. The data is there — it just isn't coherent."
+      },
+      {
+        "type": "heading",
+        "text": "Sign 3: Your Top 10 Suppliers List Looks Wrong"
+      },
+      {
+        "type": "paragraph",
+        "text": "If you look at your top suppliers by spend and something feels off — a supplier you know is significant isn't on the list, or an unfamiliar name is near the top — it's often because spend is fragmented across multiple supplier name variations."
+      },
+      {
+        "type": "heading",
+        "text": "Sign 4: You Can't Answer Basic Category Questions"
+      },
+      {
+        "type": "paragraph",
+        "text": "How much did we spend on IT last year? What's our total facilities cost? If questions like these require a significant research project rather than a dashboard lookup, your spend isn't classified at a useful level of granularity."
+      },
+      {
+        "type": "heading",
+        "text": "Sign 5: Leadership Has Stopped Asking for Spend Data"
+      },
+      {
+        "type": "paragraph",
+        "text": "The quietest sign of a spend data problem is when leadership stops asking for spend reports — not because they don't want the information, but because they've learned the numbers can't be trusted. Rebuilding that trust starts with classification."
+      }
     ]
   }
 ]

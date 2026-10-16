@@ -13,11 +13,58 @@ function formatDate(str) {
   return new Date(str).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
+// Renders inline **bold** without pulling in a markdown dependency.
+function inline(text) {
+  return String(text).split(/(\*\*[^*]+\*\*)/g).map((part, j) =>
+    part.startsWith('**') && part.endsWith('**')
+      ? <strong key={j} style={{ color: 'var(--navy)', fontWeight: 700 }}>{part.slice(2, -2)}</strong>
+      : part
+  );
+}
+
 function renderBlock(block, i) {
   if (block.type === 'heading') return (
     <h2 key={i} style={{ fontSize: 22, fontWeight: 800, letterSpacing: '-.02em', color: 'var(--navy)', marginTop: 40, marginBottom: 12, lineHeight: 1.3 }}>
       {block.text}
     </h2>
+  );
+  if (block.type === 'subheading') return (
+    <h3 key={i} style={{ fontSize: 17, fontWeight: 700, letterSpacing: '-.01em', color: 'var(--navy)', marginTop: 28, marginBottom: 10, lineHeight: 1.35 }}>
+      {block.text}
+    </h3>
+  );
+  if (block.type === 'image') {
+    const fallback = block.src.replace(/\.webp$/, '.jpg');
+    return (
+      <figure key={i} style={{ margin: '34px 0' }}>
+        <picture>
+          <source srcSet={block.src} type="image/webp" />
+          <img
+            src={fallback}
+            alt={block.alt}
+            width={block.width || 1200}
+            height={block.height || 675}
+            loading={i < 2 ? 'eager' : 'lazy'}
+            decoding="async"
+            style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 10, border: '1px solid var(--gray-200)' }}
+          />
+        </picture>
+        {block.caption && (
+          <figcaption style={{ fontSize: 13, color: 'var(--gray-400)', marginTop: 10, lineHeight: 1.55, textAlign: 'center' }}>
+            {block.caption}
+          </figcaption>
+        )}
+      </figure>
+    );
+  }
+  if (block.type === 'list') return (
+    <ul key={i} style={{ margin: '0 0 22px', paddingLeft: 22 }}>
+      {block.items.map((item, j) => (
+        <li key={j} style={{ fontSize: 16, color: 'var(--gray-600)', lineHeight: 1.75, marginBottom: 9 }}>
+          {inline(item)}
+        </li>
+      ))}
+    </ul>
   );
   if (block.type === 'callout') return (
     <div key={i} style={{ background: 'var(--copper-bg)', borderLeft: '3px solid var(--copper)', padding: '16px 20px', borderRadius: '0 8px 8px 0', margin: '28px 0', fontSize: 15, fontWeight: 600, color: 'var(--navy)', lineHeight: 1.6 }}>
@@ -26,7 +73,7 @@ function renderBlock(block, i) {
   );
   return (
     <p key={i} style={{ fontSize: 16, color: 'var(--gray-600)', lineHeight: 1.8, marginBottom: 20 }}>
-      {block.text}
+      {inline(block.text)}
     </p>
   );
 }
