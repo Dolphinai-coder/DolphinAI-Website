@@ -25,7 +25,7 @@ AZURE_SQL_USER   = os.getenv("AZURE_SQL_USER", "")   # set on Railway; empty = u
 AZURE_SQL_PASS   = os.getenv("AZURE_SQL_PASS", "")
 
 RESEND_API_KEY   = os.getenv("RESEND_API_KEY", "")
-FROM_EMAIL       = os.getenv("FROM_EMAIL", "raja.essahri@dolphinaipro.com")
+FROM_EMAIL       = os.getenv("FROM_EMAIL", "Dolphin AI <info@dolphinaipro.com>")
 NOTIFY_EMAIL     = os.getenv("NOTIFY_EMAIL", "raja.essahri@dolphinaipro.com")
 
 client = AsyncOpenAI(api_key=OPENAI_API_KEY)
@@ -264,21 +264,12 @@ async def book_demo(req: DemoRequest):
     confirm_html = f"""
     <div style="font-family:Arial,sans-serif;max-width:600px;padding:24px;">
       <img src="https://dolphinaipro.com/logowebsite.png" alt="Dolphin AI" style="height:60px;margin-bottom:24px;" />
-      <h2 style="color:#1B2A4A;">Hi {req.firstName}, you're all set!</h2>
+      <h2 style="color:#1B2A4A;">Hi {req.firstName}, thanks for getting in touch</h2>
       <p style="color:#444;line-height:1.6;">
         Thanks for your interest in Dolphin AI. We've received your demo request
-        and will send you a calendar invite within a few hours.
+        and someone from our team will reach out to you shortly.
       </p>
-      <div style="background:#FDF6F2;border-left:4px solid #A56D58;padding:16px 20px;margin:24px 0;border-radius:4px;">
-        <p style="margin:0;font-weight:600;color:#1B2A4A;">What to expect in your 30-min session:</p>
-        <ul style="color:#444;margin:8px 0 0;padding-left:18px;line-height:1.8;">
-          <li>Live classification of your spend data</li>
-          <li>Supplier normalisation demo</li>
-          <li>Savings potential estimate for your specific data</li>
-          <li>Q&amp;A with our team</li>
-        </ul>
-      </div>
-      <p style="color:#444;">While you wait, feel free to explore the live classifier:</p>
+      <p style="color:#444;line-height:1.6;">In the meantime, you're welcome to explore the live classifier:</p>
       <a href="https://dolphinaipro.com/classify"
          style="display:inline-block;background:linear-gradient(135deg,#A56D58,#8B4E3A);
                 color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;
@@ -293,7 +284,7 @@ async def book_demo(req: DemoRequest):
     """
     await asyncio.get_event_loop().run_in_executor(
         None, send_email, req.email,
-        "Your Dolphin AI demo request is confirmed ✓",
+        "We've received your Dolphin AI demo request",
         confirm_html
     )
 

@@ -3009,3 +3009,117 @@ h1, h2, h3, h4 { text-transform: capitalize; }
   .roi-tiles-spend, .roi-tiles-team { grid-template-columns: repeat(2, 1fr); }
   .roi-tiles-maturity { grid-template-columns: 1fr; }
 }
+
+/* ─── Site-wide search ─────────────────────────────────────────────────── */
+
+.site-search-trigger {
+  display: flex; align-items: center; gap: 7px;
+  height: 38px; padding: 0 11px 0 10px;
+  background: var(--white); border: 1px solid var(--gray-200);
+  border-radius: 9px; cursor: pointer;
+  color: var(--gray-600); font-family: inherit; font-size: 13.5px;
+  transition: border-color .16s, color .16s, background .16s;
+}
+.site-search-trigger:hover { border-color: var(--copper); color: var(--navy); }
+.site-search-kbd {
+  font-family: inherit; font-size: 10.5px; font-weight: 600;
+  color: var(--gray-400); background: var(--gray-50);
+  border: 1px solid var(--gray-200); border-radius: 5px;
+  padding: 2px 5px; line-height: 1;
+}
+
+.site-search-overlay {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(26, 26, 26, .42);
+  backdrop-filter: blur(3px);
+  display: flex; align-items: flex-start; justify-content: center;
+  padding: 11vh 20px 20px;
+  animation: siteSearchFade .14s ease;
+}
+@keyframes siteSearchFade { from { opacity: 0 } to { opacity: 1 } }
+
+.site-search-panel {
+  width: 100%; max-width: 620px;
+  background: var(--white); border-radius: 14px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .3);
+  overflow: hidden; display: flex; flex-direction: column;
+  max-height: 72vh;
+  animation: siteSearchRise .16s cubic-bezier(.22, .8, .3, 1);
+}
+@keyframes siteSearchRise { from { transform: translateY(-8px); opacity: .6 } to { transform: none; opacity: 1 } }
+
+.site-search-input-row {
+  display: flex; align-items: center; gap: 11px;
+  padding: 15px 16px; border-bottom: 1px solid var(--gray-100);
+}
+.site-search-input-icon { color: var(--gray-400); flex: none; }
+.site-search-input-row input {
+  flex: 1; border: none; outline: none; background: none;
+  font-family: inherit; font-size: 16px; color: var(--navy);
+}
+.site-search-input-row input::placeholder { color: var(--gray-400); }
+.site-search-close {
+  background: none; border: none; cursor: pointer; padding: 4px;
+  color: var(--gray-400); display: flex; border-radius: 6px;
+}
+.site-search-close:hover { color: var(--navy); background: var(--gray-50); }
+
+.site-search-body { overflow-y: auto; flex: 1; }
+.site-search-hint {
+  padding: 26px 20px; color: var(--gray-400);
+  font-size: 13.5px; line-height: 1.6; text-align: center;
+}
+.site-search-inline-link {
+  background: none; border: none; padding: 0; cursor: pointer;
+  color: var(--copper); font: inherit; text-decoration: underline;
+}
+
+.site-search-results { list-style: none; margin: 0; padding: 7px; }
+.site-search-result {
+  width: 100%; text-align: left; cursor: pointer;
+  background: none; border: none; border-radius: 9px;
+  padding: 10px 12px; font-family: inherit;
+  display: flex; flex-direction: column; gap: 3px;
+}
+.site-search-result.active { background: var(--copper-bg); }
+.site-search-result-top { display: flex; align-items: baseline; gap: 9px; }
+.site-search-result-title {
+  font-size: 14.5px; font-weight: 700; color: var(--navy);
+  letter-spacing: -.01em;
+}
+.site-search-result-section {
+  font-size: 10px; font-weight: 700; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--copper);
+  background: var(--cream); border-radius: 4px; padding: 2px 6px;
+}
+.site-search-result.active .site-search-result-section { background: var(--white); }
+.site-search-result-snippet {
+  font-size: 12.5px; color: var(--gray-600); line-height: 1.5;
+  overflow: hidden; display: -webkit-box;
+  -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
+
+.site-search-footer {
+  display: flex; gap: 16px; align-items: center;
+  padding: 9px 16px; border-top: 1px solid var(--gray-100);
+  background: var(--gray-50);
+  font-size: 11.5px; color: var(--gray-400);
+}
+.site-search-footer span { display: flex; align-items: center; gap: 5px; }
+.site-search-footer kbd {
+  font-family: inherit; font-size: 10.5px;
+  background: var(--white); border: 1px solid var(--gray-200);
+  border-radius: 4px; padding: 2px 5px; line-height: 1;
+  display: inline-flex; align-items: center;
+}
+
+/* The navbar is tight: show the label only on very wide screens, otherwise
+   keep the trigger as a compact icon button so the CTAs never wrap. */
+@media (max-width: 1540px) {
+  .site-search-trigger-text, .site-search-kbd { display: none; }
+  .site-search-trigger { padding: 0; width: 38px; justify-content: center; }
+}
+@media (max-width: 860px) {
+  .site-search-overlay { padding: 0; align-items: stretch; }
+  .site-search-panel { max-width: none; border-radius: 0; max-height: 100vh; }
+}

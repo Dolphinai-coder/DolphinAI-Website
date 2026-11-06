@@ -122,8 +122,8 @@ export default function BookDemoPage() {
             {submitted ? (
               <div className="demo-success">
                 <div className="success-icon"><CheckCircle2 size={40} /></div>
-                <h2>You're booked in!</h2>
-                <p>Thanks, <strong>{form.firstName}</strong>. We'll send a calendar invite to <strong>{form.email}</strong> within the next few hours.</p>
+                <h2>Request received!</h2>
+                <p>Thanks, <strong>{form.firstName}</strong>. We've sent a confirmation to <strong>{form.email}</strong>, and someone from our team will reach out to you shortly.</p>
                 <p style={{ color: 'var(--gray-400)', fontSize: '13.5px' }}>
                   While you wait, explore how the classifier works.
                 </p>

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import SiteSearch from './SiteSearch.jsx';
 import PricingPage from './PricingPage.jsx';
 import ClassifyPage from './ClassifyPage.jsx';
 import PrivacyPage from './PrivacyPage.jsx';
@@ -678,6 +679,7 @@ function HomePage() {
             <Link to="/contact">Contact</Link>
           </nav>
           <div className="nav-actions">
+            <SiteSearch />
             <Link to="/book-demo" className="btn btn-primary">Book a Demo</Link>
             <Link to="/assessment" className="btn btn-soft-estimate">Get a free estimate <ArrowRight size={14} /></Link>
           </div>

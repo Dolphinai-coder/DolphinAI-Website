@@ -4,6 +4,7 @@ import {
   ArrowRight, Layers3, Building2, TrendingUp, Lightbulb,
   Database, Link2, GitBranch, PieChart, ShieldCheck, ClipboardList, BookOpen, BarChart2,
 } from 'lucide-react';
+import SiteSearch from './SiteSearch.jsx';
 
 export default function Navbar() {
   const [productOpen, setProductOpen] = useState(false);
@@ -109,6 +110,7 @@ export default function Navbar() {
           </nav>
 
           <div className="nav-actions">
+            <SiteSearch />
             <Link to="/book-demo" className="btn btn-primary">Book a Demo</Link>
             <Link to="/assessment" className="btn btn-soft-estimate">Get a free estimate <ArrowRight size={14} /></Link>
           </div>
