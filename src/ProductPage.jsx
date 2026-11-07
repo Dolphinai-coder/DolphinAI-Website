@@ -61,7 +61,7 @@ const CAPABILITIES = [
     why: 'Having data is not the same as having insight. Most teams spend 80% of their time preparing reports and only 20% acting on them. Spend intelligence reverses that ratio.',
     how: 'Once your data is cleaned and classified, Dolphin AI automatically generates category breakdowns, supplier league tables, period-over-period trends, and variance alerts — all exportable for board presentations.',
     benefits: [
-      'Pre-built dashboards for CPOs, category managers, and CFOs',
+      'Pre-built dashboards for leadership, category managers, and finance',
       'Category trend analysis and YoY variance',
       'Top-supplier heat maps and concentration reports',
       'One-click export to PowerPoint and Excel',

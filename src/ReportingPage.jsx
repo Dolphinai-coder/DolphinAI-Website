@@ -278,7 +278,7 @@ export default function ReportingPage() {
           <div className="container rpt-features-grid">
             {[
               { icon: <TrendingUp size={20} />, title: 'Always up to date', desc: 'Data refreshes automatically from every connected source. No manual exports, no stale reports.' },
-              { icon: <LayoutDashboard size={20} />, title: 'Role-based views', desc: 'CPO, category manager, CFO — each role gets the view they need without drowning in irrelevant data.' },
+              { icon: <LayoutDashboard size={20} />, title: 'Role-based views', desc: 'Leadership, category managers, finance — each role gets the view they need without drowning in irrelevant data.' },
               { icon: <Download size={20} />, title: 'One-click export', desc: 'Every dashboard and table exports to PDF, Excel, or CSV in seconds. Board-ready in minutes.' },
               { icon: <ShieldCheck size={20} />, title: 'Enterprise security', desc: 'All data processed within your security boundary. SOC 2 aligned, role-based access control.' },
             ].map(f => (

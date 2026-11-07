@@ -7,7 +7,15 @@ import { ArrowRight, CheckCircle2, Calendar, Clock, Users } from 'lucide-react';
 const API_URL       = import.meta.env.VITE_API_URL || 'https://dolphinai-api-c2a8ezgdctakh9g0.centralus-01.azurewebsites.net';
 const COMPANY_SIZES = ['1–50', '51–200', '201–500', '501–2,000', '2,000–10,000', '10,000+'];
 const SPEND_RANGES  = ['Under $5M', '$5M–$25M', '$25M–$100M', '$100M–$500M', 'Over $500M'];
-const ROLES         = ['CPO / Head of Organization', 'Organization Manager', 'Finance / CFO', 'Data / Analytics', 'IT', 'Other'];
+const ROLES         = [
+  'Executive / Leadership',
+  'Supply Chain',
+  'Finance',
+  'Operations',
+  'Data / Analytics',
+  'IT',
+  'Other',
+];
 
 const PERSONAL_DOMAINS = new Set([
   'gmail.com','yahoo.com','hotmail.com','outlook.com','live.com','msn.com',
@@ -113,7 +121,7 @@ export default function BookDemoPage() {
 
             <div className="demo-quote">
               <p>"Dolphin AI cut our data cleaning time by 80% and gave us confidence in our spend reports for the first time."</p>
-              <span>— Head of Organization, $2B manufacturing group</span>
+              <span>— Head of Supply Chain, $2B manufacturing group</span>
             </div>
           </div>
 

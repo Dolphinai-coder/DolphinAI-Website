@@ -101,7 +101,7 @@ const PHASES = [
     duration: 'Days 14–30',
     what: 'Your dashboards go live. Every KPI, chart, and table updates automatically as new transactions arrive. No manual refresh, no exports, no waiting.',
     how: [
-      'Pre-built views for CPO, category managers, and CFO',
+      'Pre-built views for leadership, category managers, and finance',
       'Spend by category (L1–L4), supplier rankings, trend charts',
       'Anomaly alerts and savings opportunities surfaced automatically',
       'Export to PDF, Excel, or CSV in one click',

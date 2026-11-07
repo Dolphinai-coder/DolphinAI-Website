@@ -500,7 +500,7 @@ export default function ScopingPage() {
                       deliverable: 'Live dashboards + user training session + handover documentation',
                       items: [
                         'Spend by category (L1–L4), supplier rankings, trend charts — all live',
-                        'Role-based access set up: CPO, category managers, finance',
+                        'Role-based access set up: leadership, category managers, finance',
                         'Walkthrough session with your core team',
                         'Ongoing data refresh configured — new transactions classified automatically',
                       ],

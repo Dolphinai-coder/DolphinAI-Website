@@ -203,7 +203,7 @@ export default function ContactPage() {
                     <div className="contact-info-icon"><MapPin size={16} /></div>
                     <div>
                       <strong>Office</strong>
-                      <span>7301 State Highway 161 Ste 148<br />Irving, TX 75039</span>
+                      <span>7301 N Highway 161, #148<br />Irving, TX 75039</span>
                     </div>
                   </div>
                 </div>

@@ -73,12 +73,12 @@ export default function SiteSearch() {
     <>
       <button
         type="button"
-        className="site-search-trigger"
+        className="site-search-bar"
         onClick={() => setOpen(true)}
         aria-label="Search the site"
       >
-        <Search size={16} />
-        <span className="site-search-trigger-text">Search</span>
+        <Search size={17} className="site-search-bar-icon" />
+        <span className="site-search-bar-text">Search…</span>
         <kbd className="site-search-kbd">⌘K</kbd>
       </button>
 

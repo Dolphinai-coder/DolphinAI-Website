@@ -967,7 +967,7 @@ function HomePage() {
             <p>Intelligent Spend Classification for modern organization and finance teams.</p>
             <p style={{ fontSize: '12.5px', color: 'rgba(255,255,255,0.35)', marginTop: '0.5rem', lineHeight: 1.5 }}>
               Dolphin AI LLC<br />
-              7301 State Highway 161 Ste 148<br />
+              7301 N Highway 161, #148<br />
               Irving, TX 75039
             </p>
             <div className="footer-social">

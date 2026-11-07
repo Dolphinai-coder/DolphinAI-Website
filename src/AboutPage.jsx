@@ -142,7 +142,7 @@ export default function AboutPage() {
           <div className="about-location-card">
             <div>
               <h3>Headquartered in Irving, Texas</h3>
-              <p>Dolphin AI LLC · 7301 State Highway 161 Ste 148 · Irving, TX 75039</p>
+              <p>Dolphin AI LLC · 7301 N Highway 161, #148 · Irving, TX 75039</p>
               <p style={{ marginTop: '0.5rem' }}>
                 Serving organization and finance teams globally, with a focus on North American
                 and North American mid-market and enterprise organizations.
