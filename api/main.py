@@ -27,6 +27,9 @@ AZURE_SQL_PASS   = os.getenv("AZURE_SQL_PASS", "")
 RESEND_API_KEY   = os.getenv("RESEND_API_KEY", "")
 FROM_EMAIL       = os.getenv("FROM_EMAIL", "Dolphin AI <info@dolphinaipro.com>")
 NOTIFY_EMAIL     = os.getenv("NOTIFY_EMAIL", "raja.essahri@dolphinaipro.com")
+# Copied on every email the site sends, so the team sees the whole correspondence
+# in one inbox. Set COPY_EMAIL="" to turn it off.
+COPY_EMAIL       = os.getenv("COPY_EMAIL", "info@dolphinaipro.com")
 
 client = AsyncOpenAI(api_key=OPENAI_API_KEY)
 
@@ -179,15 +182,23 @@ def send_email(to: str, subject: str, html: str):
     if not RESEND_API_KEY:
         print("⚠ Email skipped: RESEND_API_KEY not set")
         return
+    payload = {"from": FROM_EMAIL, "to": [to], "subject": subject, "html": html}
+
+    # Keep info@ on copy for every outgoing message — unless it is already the
+    # recipient, since Resend would then deliver the same email twice.
+    cc = COPY_EMAIL.strip()
+    if cc and cc.lower() not in to.lower():
+        payload["cc"] = [cc]
+
     try:
         with httpx.Client(timeout=15) as client:
             resp = client.post(
                 "https://api.resend.com/emails",
                 headers={"Authorization": f"Bearer {RESEND_API_KEY}", "Content-Type": "application/json"},
-                json={"from": FROM_EMAIL, "to": [to], "subject": subject, "html": html},
+                json=payload,
             )
             resp.raise_for_status()
-        print(f"✓ Email sent → {to}")
+        print(f"✓ Email sent → {to}" + (f" (cc {cc})" if "cc" in payload else ""))
     except Exception as e:
         print(f"⚠ Email error: {e}")
 

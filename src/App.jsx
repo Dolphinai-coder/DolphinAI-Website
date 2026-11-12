@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SiteSearch from './SiteSearch.jsx';
+import ExplainerVideo from './ExplainerVideo.jsx';
 import PricingPage from './PricingPage.jsx';
 import ClassifyPage from './ClassifyPage.jsx';
 import PrivacyPage from './PrivacyPage.jsx';
@@ -722,6 +723,9 @@ function HomePage() {
 
         {/* ══ LOGO TICKER ══ */}
         <LogoTicker />
+
+        {/* ══ EXPLAINER VIDEO ══ */}
+        <ExplainerVideo />
 
         {/* ══ BEFORE / AFTER ══ */}
         <AfterPreviewSection />
