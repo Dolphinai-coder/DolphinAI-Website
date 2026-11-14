@@ -1,6 +1,6 @@
 import Navbar from './Navbar.jsx';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Lock, Server, Eye, FileCheck, Users } from 'lucide-react';
+import { ShieldCheck, Lock, Server, Eye, FileCheck, Users, Check, Clock3 } from 'lucide-react';
 
 const PILLARS = [
   {
@@ -35,7 +35,43 @@ const PILLARS = [
   },
 ];
 
+/*
+  Compliance status. "progress" renders as amber and must stay amber until an
+  independent auditor has actually issued the report — SOC 2 is an attestation,
+  not a certification, so there is nothing to claim before that date.
+*/
+const COMPLIANCE = [
+  {
+    name: 'SOC 2 Type II',
+    state: 'progress',
+    stateLabel: 'In preparation',
+    body: 'We are implementing and documenting the controls a SOC 2 Type II examination requires — access management, change control, logging and monitoring, incident response, and vendor review. The examination is performed by an independent auditor and has not been completed, so there is no report to share yet. We will publish the date it is issued.',
+  },
+  {
+    name: 'GDPR',
+    state: 'live',
+    stateLabel: 'In place',
+    body: 'Personal and organizational data is processed in accordance with GDPR. We sign DPAs as standard for enterprise clients and answer data subject requests within 30 days.',
+  },
+  {
+    name: 'NDA & DPA',
+    state: 'live',
+    stateLabel: 'Signed as standard',
+    body: 'Mutual NDA before any data changes hands or any demo touches real spend data, and a standard Data Processing Agreement for every paid client, with addendums where your compliance team needs them.',
+  },
+  {
+    name: 'Security review',
+    state: 'live',
+    stateLabel: 'Available on request',
+    body: 'We complete standard vendor security questionnaires and provide a written security summary covering our architecture, data flows, subprocessors and controls — enough for your IT security team to assess us before the SOC 2 report exists.',
+  },
+];
+
 const FAQS = [
+  {
+    q: 'What is your SOC 2 status?',
+    a: 'Our SOC 2 Type II program is underway. The controls such an examination covers — access management, change control, logging and monitoring, incident response and vendor review — are being implemented and documented as part of it, and the examination itself is performed by an independent CPA firm over a defined observation period. If your procurement process needs documentation before that period closes, we share our control documentation, complete your vendor security questionnaire, and walk your security team through exactly where we are.',
+  },
   {
     q: 'Do you sign NDAs?',
     a: 'Yes. We sign mutual NDAs as standard before any data is shared or any demo involving real spend data is conducted.',
@@ -90,6 +126,37 @@ export default function SecurityPage() {
           </div>
         </section>
 
+        {/* Compliance status */}
+        <section className="sec-comp">
+          <div className="container">
+            <div className="section-head centered">
+              <span className="eyebrow">Compliance</span>
+              <h2>Where we stand today</h2>
+              <div className="section-rule" />
+              <p className="sec-comp-sub">
+                No badges we have not earned. Here is the honest status of every
+                framework a security team asks us about.
+              </p>
+            </div>
+
+            <div className="sec-comp-grid">
+              {COMPLIANCE.map(c => (
+                <div className={`sec-comp-card is-${c.state}`} key={c.name}>
+                  <div className="sec-comp-head">
+                    <h3>{c.name}</h3>
+                    <span className={`sec-comp-chip is-${c.state}`}>
+                      {c.state === 'live' ? <Check size={13} /> : <Clock3 size={13} />}
+                      {c.stateLabel}
+                    </span>
+                  </div>
+                  <p>{c.body}</p>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </section>
+
         {/* Trust bar */}
         <section className="sec-trust">
           <div className="container sec-trust-inner">
@@ -98,6 +165,7 @@ export default function SecurityPage() {
               { label: 'AES-256',      sub: 'Encryption at rest' },
               { label: 'EU Cloud',     sub: 'EU-region cloud storage' },
               { label: 'GDPR',         sub: 'Compliant by design' },
+              { label: 'SOC 2',        sub: 'Type II in preparation' },
               { label: 'DPA',          sub: 'Signed as standard' },
               { label: '90 days',      sub: 'Max data retention' },
             ].map(t => (
