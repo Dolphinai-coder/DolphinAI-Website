@@ -136,7 +136,8 @@ const FAQS = [
   {
     group: 'Rollout & Trust',
     q: 'How secure is our data with Dolphin AI?',
-    a: ["We take the security of our clients' data seriously. Dolphin AI is built and hosted in a certified, enterprise-grade cloud environment that follows leading industry security and compliance standards, and your data is never shared with third parties.",
+    a: ["Your data is encrypted in transit (TLS 1.2+) and at rest (AES-256), isolated per client, and never used to train models or shared with third parties. We sign a mutual NDA before any data changes hands and a DPA for every paid client.",
+         "We are currently preparing for a SOC 2 Type II examination. It is performed by an independent auditor and is not finished, so we do not claim it yet — but we will complete your vendor security questionnaire and share our control documentation today. Full detail is on our Security page.",
          "For enterprise implementations, we work with your technical team to align with your organization's security policies."],
   },
   {

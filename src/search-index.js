@@ -34,7 +34,7 @@ const PAGES = [
   { title: 'Onboarding', path: '/onboarding', section: 'Page',
     text: 'Onboarding implementation timeline getting started setup how long does it take' },
   { title: 'Security', path: '/security', section: 'Page',
-    text: 'Security encryption Key Vault data protection compliance SOC 2 access control hosting Azure' },
+    text: 'Security encryption Key Vault data protection compliance SOC 2 Type II certified certification attestation audit GDPR DPA NDA vendor security questionnaire access control hosting Azure' },
   { title: 'About', path: '/about', section: 'Page',
     text: 'About Dolphin AI company team mission who we are' },
   { title: 'Contact', path: '/contact', section: 'Page',
