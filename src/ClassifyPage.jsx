@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles, AlertCircle, Loader2, ChevronDown, RotateCcw, ArrowRight, Calendar } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://dolphinai-api-c2a8ezgdctakh9g0.centralus-01.azurewebsites.net';
+import { apiEndpoint } from './apiEndpoint.js';
 const MAX_USES = 2;
 
 const LEVEL_CONFIG = [
@@ -130,7 +130,7 @@ export default function ClassifyPage() {
 
     setError(''); setResult(null); setLoading(true);
     try {
-      const res  = await fetch(`${API_URL}/api/classify`, {
+      const res  = await fetch(apiEndpoint('/api/classify'), {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ supplier: supplier.trim(), po_description: description.trim(), invoice_description: '' }),
       });

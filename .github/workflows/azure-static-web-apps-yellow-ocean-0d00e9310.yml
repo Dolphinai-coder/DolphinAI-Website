@@ -11,14 +11,21 @@ on:
 
 jobs:
   build_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed' && github.event.pull_request.draft == false)
     runs-on: ubuntu-latest
     name: Build and Deploy Job
+    env:
+      VITE_DEPLOYMENT_ENV: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && 'production' || 'preview' }}
+      VITE_API_URL: ${{ github.event_name == 'pull_request' && vars.VITE_PREVIEW_API_URL || '' }}
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
           lfs: false
+      - name: Verify API environment isolation
+        run: node --test scripts/api-endpoint.test.mjs
+      - name: Check frontend dependency vulnerabilities
+        run: npm audit --package-lock-only --ignore-scripts --audit-level=moderate
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1

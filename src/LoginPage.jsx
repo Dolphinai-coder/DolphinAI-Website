@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ArrowRight, Eye, EyeOff } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://dolphinai-api-c2a8ezgdctakh9g0.centralus-01.azurewebsites.net';
+import { apiEndpoint } from './apiEndpoint.js';
 
 export default function LoginPage() {
   const navigate   = useNavigate();
@@ -21,7 +21,7 @@ export default function LoginPage() {
     setError('');
     setLoading(true);
     try {
-      const res  = await fetch(`${API_URL}/api/auth/login`, {
+      const res  = await fetch(apiEndpoint('/api/auth/login'), {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ email, password }),
@@ -35,7 +35,7 @@ export default function LoginPage() {
         navigate(redirectTo);
       }
     } catch {
-      setError('Cannot reach the server. Make sure the API is running.');
+      setError('This service is currently unavailable. Please try again later.');
       setLoading(false);
     }
   }

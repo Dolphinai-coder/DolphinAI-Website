@@ -3,7 +3,6 @@ import { useState, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, Play } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://dolphinai-api-c2a8ezgdctakh9g0.centralus-01.azurewebsites.net';
 
 export default function DemoVideoPage() {
   const navigate              = useNavigate();
