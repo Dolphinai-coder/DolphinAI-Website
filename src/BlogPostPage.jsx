@@ -13,13 +13,25 @@ function formatDate(str) {
   return new Date(str).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
-// Renders inline **bold** without pulling in a markdown dependency.
+// Renders inline **bold** and [links](url) without pulling in a markdown
+// dependency. A link to our own domain becomes a client-side route, so it does
+// not reload the whole app.
+const LINK_STYLE = { color: 'var(--copper)', textDecoration: 'underline', textUnderlineOffset: 2 };
+
 function inline(text) {
-  return String(text).split(/(\*\*[^*]+\*\*)/g).map((part, j) =>
-    part.startsWith('**') && part.endsWith('**')
-      ? <strong key={j} style={{ color: 'var(--navy)', fontWeight: 700 }}>{part.slice(2, -2)}</strong>
-      : part
-  );
+  return String(text).split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g).map((part, j) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={j} style={{ color: 'var(--navy)', fontWeight: 700 }}>{part.slice(2, -2)}</strong>;
+    }
+    const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (!link) return part;
+
+    const [, label, href] = link;
+    const internal = href.replace(/^https?:\/\/(www\.)?dolphinaipro\.com/i, '');
+    return internal.startsWith('/')
+      ? <Link key={j} to={internal} style={LINK_STYLE}>{label}</Link>
+      : <a key={j} href={href} target="_blank" rel="noopener noreferrer" style={LINK_STYLE}>{label}</a>;
+  });
 }
 
 function renderBlock(block, i) {
@@ -65,6 +77,36 @@ function renderBlock(block, i) {
         </li>
       ))}
     </ul>
+  );
+  if (block.type === 'table') return (
+    <div key={i} style={{ overflowX: 'auto', margin: '28px 0 26px' }}>
+      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14.5, minWidth: 460 }}>
+        <thead>
+          <tr>
+            {block.head.map((h, j) => (
+              <th key={j} style={{
+                textAlign: 'left', padding: '11px 14px', fontWeight: 700, color: 'var(--navy)',
+                background: 'var(--gray-50)', borderBottom: '2px solid var(--gray-200)',
+                whiteSpace: 'nowrap',
+              }}>{h}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {block.rows.map((row, j) => (
+            <tr key={j}>
+              {row.map((cell, k) => (
+                <td key={k} style={{
+                  padding: '11px 14px', color: k === 0 ? 'var(--navy)' : 'var(--gray-600)',
+                  fontWeight: k === 0 ? 600 : 400, lineHeight: 1.6, verticalAlign: 'top',
+                  borderBottom: '1px solid var(--gray-200)',
+                }}>{inline(cell)}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
   if (block.type === 'callout') return (
     <div key={i} style={{ background: 'var(--copper-bg)', borderLeft: '3px solid var(--copper)', padding: '16px 20px', borderRadius: '0 8px 8px 0', margin: '28px 0', fontSize: 15, fontWeight: 600, color: 'var(--navy)', lineHeight: 1.6 }}>

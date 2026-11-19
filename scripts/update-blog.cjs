@@ -78,6 +78,13 @@ function textToContent(text) {
     if (lines.length && lines.every(l => l.startsWith('- '))) {
       return { type: 'list', items: lines.map(l => l.slice(2).trim()) };
     }
+    // | Col | Col |   -> table. The second line is markdown's |---|---| rule,
+    // which carries no content and is dropped.
+    if (lines.length >= 3 && lines.every(l => l.startsWith('|'))) {
+      const cells = l => l.replace(/^\||\|$/g, '').split('|').map(s => s.trim());
+      const [head, , ...body] = lines;
+      return { type: 'table', head: cells(head), rows: body.map(cells) };
+    }
     return { type: 'paragraph', text: lines.join(' ') };
   }).filter(Boolean);
 }
